@@ -1,7 +1,7 @@
 // ternario é uma forma simplificada e escrever
 // if-else
 
-    let solteiro = false
+    let solteiro = true
 
     if (solteiro == true) {
         console.log('Tá na pista!')

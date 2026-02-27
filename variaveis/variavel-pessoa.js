@@ -2,7 +2,7 @@
 // valores constantes e variaveis
 // operadores: +, -, *, / , %
 
-let nome = "Petter"         // String
+let nome = "Petters"         // String
 let aghata = "Van Helsing"  // String
 const cpf = "219.859.259.00" // String
 const rg = "202020"
