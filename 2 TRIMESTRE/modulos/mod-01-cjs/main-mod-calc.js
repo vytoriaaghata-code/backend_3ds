@@ -1,7 +1,6 @@
+// Modulo ESM é a versão
+// moderna e recomendada
+// utiliza import/export
 
-const calc = require('./mod-calc.js')
-
-console.log(calc.somar(5,6))
-
-
+import banhoGato from './petshop.js'
 
