@@ -1,10 +1,12 @@
 // importar modulos
 const http = require('node:http')
-const porta = 8001
+const porta = 8007
 
 // criar servidor e rotas
-const server = http.creatServer( (req, res) => {
+const server = http.createServer( (req, res) => {
      // rotas e conteúdos
+     res.setHeader('Content-Type', 'text/html; charset=utf8' )
+     res.end('<h3>Página Inicial</h3>')
 })
 
 // liberar porta no meu PC
