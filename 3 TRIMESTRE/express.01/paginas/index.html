@@ -1,13 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../estilos/index.css">
-    <title>Inicio Doces</title>
+    <!-- Fontes Premium: Playfair Display para títulos e Inter para o corpo -->
+    <title>Atelier du Chocolat | Alta Confeitaria</title>
 </head>
+
 <body>
-    <h3>Página Inicial</h3>
-    <p>Bem Vindo(a) a home!</p>
+
+    <!-- Cabeçalho Institucional -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">Atelier <span>du Chocolat</span></a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/sobre">Sobre Nós</a></li>
+                    <li><a href="/produtos">Produtos</a></li>
+                    <li><a href="/serviços">Serviços Festivos</a></li>
+                </ul>
+            </nav>
+            <a href="/produtos" class="btn-cta btn-small">Encomendar</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Dobra Principal (Hero Section) -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge">Alta Confeitaria Fina</span>
+                    <h1>Sobremesas feitas como obras de arte para momentos inesquecíveis.</h1>
+                    <p>Experiências gastronômicas exclusivas criadas com chocolate belga de origem controlada e técnicas
+                        tradicionais francesas.</p>
+                    <div class="hero-actions">
+                        <a href="/produtos" class="btn-cta">Reservar Encomenda Exclusiva</a>
+                        <a href="/serviços" class="btn-secondary">Cardápio de Eventos</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- Imagem otimizada em formato .webp conforme requisitos técnicos -->
+                    <img src="" alt="Bolo artístico premium decorado com folhas de ouro" class="hero-image"
+                        loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Vitrine de Destaques Dinâmica (Best Sellers) -->
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Os Mais Pedidos do Atelier</h2>
+                <p>Nossas assinaturas mais aclamadas pelos paladares mais exigentes.</p>
+            </div>
+            <div class="products-carousel">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="" alt="Entremet de Chocolate Belga" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Entremet d'Or</h3>
+                        <p>Mousse de chocolate belga 70%, base de praliné de avelãs e glaçagem espelhada perfeita.</p>
+                        <span class="product-price">R$ 180,00</span>
+                    </div>
+                </div>
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="" alt="Mil Folhas Tradicional" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mille-Feuille Vanilla</h3>
+                        <p>Massa folhada artesanal invertida e creme pâtissière leve com baunilha natural de Madagascar.
+                        </p>
+                        <span class="product-price">R$ 140,00</span>
+                    </div>
+                </div>
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="" alt="Macarons Sortidos Finos" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coffret de Macarons</h3>
+                        <p>Caixa luxuosa com 12 macarons artesanais nos sabores mais célebres da confeitaria parisiense.
+                        </p>
+                        <span class="product-price">R$ 95,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Seção de Segurança / Como Funciona -->
+        <section class="how-it-works">
+            <div class="section-header">
+                <h2>Do Atelier à Sua Celebração</h2>
+                <p>Garantia de pontualidade, frescor absoluto e cuidado rigoroso no transporte.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.527 10-10S17.523 2 12 2 2 6.527 2 12s4.523 10 10 10z" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>1. Agendamento Antecipado</h3>
+                    <p>Selecione a data ideal para o seu evento. Produzimos sob demanda para garantir a textura
+                        impecável.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+                            <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                        </svg>
+                    </div>
+                    <h3>2. Embalagem Estruturada</h3>
+                    <p>Os doces são acomodados em caixas rígidas térmicas com travas de segurança antichoque.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>3. Transporte Climatizado</h3>
+                    <p>Frota própria monitorada com refrigeração controlada para manter o chocolate intacto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Bloco de Depoimentos Modulares (Prova Social) -->
+        <section class="testimonials-section">
+            <div class="section-header">
+                <h2>Experiências Compartilhadas</h2>
+                <p>O depoimento de quem transformou um momento comum em uma memória inesquecível.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Os entremets foram o ponto alto do aniversário de casamento. Além de
+                        visualmente impecáveis, o sabor do chocolate 70% com avelãs é indescritível."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Helena Menezes</span>
+                        <span class="author-detail">Evento Particular — Curitiba</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Encomendei os macarons corporativos para o lançamento da nossa marca e
+                        os clientes ficaram encantados. A entrega climatizada fez toda a diferença."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Ricardo Fontes</span>
+                        <span class="author-detail">Diretor na Fontes Tech — B2B</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 5. Rodapé Institucional -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="/" class="logo">Atelier <span>du Chocolat</span></a>
+                <p>Alta Confeitaria Artística sob encomenda.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="/sobre">Sobre Nós</a></li>
+                    <li><a href="/produtos">Nossos Doces</a></li>
+                    <li><a href="/serviços">Serviços Corporativos</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Atendimento Local</h4>
+                <p>WhatsApp: (41) 99999-0000</p>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p><a href="/politicas" class="footer-legal">Políticas de Entrega de Perecíveis</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atelier du Chocolat. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

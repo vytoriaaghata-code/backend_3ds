@@ -1,5 +1,434 @@
+/* ==========================================================================
+   1. Variáveis de Design e Configurações Base
+   ========================================================================== */
+:root {
+    /* Paleta de Cores Alinhada ao Posicionamento Premium */
+    --clr-brand: #2B1B17;          /* Chocolate Amargo (Contraste Fino) */
+    --clr-bg: #FDFBF7;             /* Creme Real (Fundo Principal) */
+    --clr-surface: #FFFFFF;        /* Branco Puro para Cards */
+    --clr-accent: #D4AF37;         /* Dourado Champagne (Conversão) */
+    --clr-accent-hover: #B89328;   /* Dourado Profundo */
+    --clr-text-main: #332420;      /* Texto de Alta Legibilidade */
+    --clr-text-muted: #6B5E5A;    /* Cinza Quente para Subtítulos */
+    --clr-border: rgba(43, 27, 23, 0.06);
 
-* {
-    background-color: rgb(221, 203, 229);
-    color: white
+    /* Tipografia Profissional */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Efeitos de Transição e Sombras */
+    --fx-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --fx-shadow-sm: 0 4px 20px rgba(43, 27, 23, 0.02);
+    --fx-shadow-md: 0 12px 32px rgba(43, 27, 23, 0.04);
+    --fx-shadow-lg: 0 24px 48px rgba(43, 27, 23, 0.08);
+}
+
+/* Reset Técnico Avançado */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--clr-bg);
+    color: var(--clr-text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ==========================================================================
+   2. Componentes Globais e Estruturais
+   ========================================================================== */
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 64px auto;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    color: var(--clr-brand);
+    margin-bottom: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: var(--clr-text-muted);
+}
+
+/* Botões de Conversão de Alta Clicabilidade */
+.btn-cta, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 36px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: var(--fx-transition);
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
+
+.btn-cta {
+    background-color: var(--clr-accent);
+    color: var(--clr-surface);
+    border: 1px solid var(--clr-accent);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+}
+
+.btn-cta:hover {
+    background-color: var(--clr-accent-hover);
+    border-color: var(--clr-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--clr-brand);
+    border: 1px solid var(--clr-brand);
+}
+
+.btn-secondary:hover {
+    background-color: var(--clr-brand);
+    color: var(--clr-bg);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: rgba(212, 175, 55, 0.08);
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+/* ==========================================================================
+   3. Cabeçalho Dinâmico (Navigation)
+   ========================================================================== */
+.main-header {
+    background-color: rgba(253, 251, 247, 0.85);
+    border-bottom: 1px solid var(--clr-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--clr-brand);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--clr-accent);
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: var(--clr-brand);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    position: relative;
+    padding: 6px 0;
+    transition: var(--fx-transition);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--clr-accent);
+    transition: var(--fx-transition);
+}
+
+.nav-menu a:hover {
+    color: var(--clr-accent);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   4. Dobra Principal (Hero Section)
+   ========================================================================== */
+.hero-section {
+    padding: 100px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.15;
+    color: var(--clr-brand);
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 44px;
+    max-width: 560px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--fx-shadow-lg);
+}
+
+.hero-image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   5. Vitrine de Destaques (Products Grid/Carousel)
+   ========================================================================== */
+.products-section {
+    padding: 120px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.products-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.product-card {
+    background-color: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--fx-shadow-sm);
+    transition: var(--fx-transition);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--fx-shadow-lg);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+.product-img-box {
+    overflow: hidden;
+    height: 320px;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.06);
+}
+
+.product-info {
+    padding: 32px;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    color: var(--clr-brand);
+    margin-bottom: 12px;
+}
+
+.product-info p {
+    font-size: 0.95rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 24px;
+    min-height: 72px;
+}
+
+.product-price {
+    font-family: var(--font-body);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--clr-brand);
+    display: block;
+    position: relative;
+}
+
+/* ==========================================================================
+   6. Seção de Confiança / Como Funciona
+   ========================================================================== */
+.how-it-works {
+    background-color: rgba(43, 27, 23, 0.015);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    padding: 120px 24px;
+}
+
+.steps-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step-card {
+    background-color: var(--clr-surface);
+    padding: 48px 36px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--fx-shadow-sm);
+    transition: var(--fx-transition);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--fx-shadow-md);
+}
+
+.step-icon {
+    color: var(--clr-accent);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+    transition: var(--fx-transition);
+}
+
+.step-card:hover .step-icon {
+    background-color: var(--clr-accent);
+    color: var(--clr-surface);
+}
+
+.step-card h3 {
+    font-size: 1.4rem;
+    color: var(--clr-brand);
+    margin-bottom: 14px;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: var(--clr-text-muted);
+}
+
+/* ==========================================================================
+   7. Prova Social (Testimonials Section)
+   ========================================================================== */
+.testimonials-section {
+    padding: 120px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--clr-surface);
+    padding: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--fx-shadow-sm);
+    position: relative;
+}
+
+.rating {
+    color: var(--clr-accent);
+    margin-bottom: 20px;
+    font-size: 0.85rem;
 }

@@ -8,7 +8,7 @@ app.use(express.static(path.join(dirBase, 'publico')))
 
 // Cria as rotas do servidor 
 app.get('/', (req, res) => {
-    res.sendFile('./paginas/index.html', {root: import.meta.dirname})
+    res.sendFile('paginas/index.html', {root: import.meta.dirname})
 })
 // Liberar a porta do meu computador 
 app.listen(porta, () => {console.log('Servidro está vivo!')} )
