@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho da Pizza | Qualidade Premium</title>
+    <link rel="stylesheet" href="../../css/index.css">
+    <!-- Fontes com alta nitidez e contraste -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Ícones para Redes Sociais e Interface -->
+    
+</head>
+<body>
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                Rancho da <span>Pizza</span>
+            </a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/produtos">Cardápio</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#perfil" class="btn-profile-nav" title="Ir para o Perfil">
+                    <i class="fa-solid fa-user"></i> <span>Minha Conta</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- PÁGINA 1: ENTRADA (HERO SECTION) -->
+        <section id="inicio" class="section-wrapper hero-section">
+            <div class="hero-container">
+                <div class="hero-badge">🍕 O autêntico forno a lenha</div>
+                <h1>Sabores memoráveis criados por mestres pizzaiolos.</h1>
+                <p>Ingredientes rigorosamente selecionados, massa de fermentação natural leve e crocante, direto para a sua mesa.</p>
+                <div class="hero-actions">
+                    <a href="#produtos" class="btn-primary">Explorar Cardápio</a>
+                    <a href="#sobre" class="btn-outline">Conhecer Nossa História</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 2: CARDÁPIO (OPÇÕES, TAMANHOS E SABORES) -->
+        <section id="produtos" class="section-wrapper menu-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Nossas Pizzas</h2>
+                    <p>Selecione o tamanho ideal e saboreie a perfeição em formato de pizza.</p>
+                </header>
+
+                <div class="menu-grid">
+                    <!-- Produto 1 -->
+                    <article class="pizza-card">
+                        <div class="pizza-badge">Mais Pedida</div>
+                        <div class="pizza-image-placeholder"><i class="fa-solid fa-pizza-slice"></i></div>
+                        <div class="pizza-details">
+                            <h3>Calabresa Artesanal</h3>
+                            <p class="pizza-description">Molho de tomate pelado italiano, muçarela premium, calabresa defumada artesanal, cebola roxa e folhas de manjericão fresco.</p>
+                            
+                            <div class="pizza-options">
+                                <label>Tamanho e Valor:</label>
+                                <div class="size-selectors">
+                                    <label class="size-option">
+                                        <input type="radio" name="calabresa-size" checked>
+                                        <span>Broto (4 fatias) - <strong>R$ 39,90</strong></span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="calabresa-size">
+                                        <span>Média (6 fatias) - <strong>R$ 54,90</strong></span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="calabresa-size">
+                                        <span>Grande (8 fatias) - <strong>R$ 69,90</strong></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <a href="#pagamento" class="btn-secondary">Adicionar e Finalizar</a>
+                        </div>
+                    </article>
+
+                    <!-- Produto 2 -->
+                    <article class="pizza-card">
+                        <div class="pizza-image-placeholder"><i class="fa-solid fa-pizza-slice"></i></div>
+                        <div class="pizza-details">
+                            <h3>Quatro Queijos Supremo</h3>
+                            <p class="pizza-description">Combinação harmônica de muçarela, provolone defumado, gorgonzola de alta intensidade e o legítimo Catupiry original.</p>
+                            
+                            <div class="pizza-options">
+                                <label>Tamanho e Valor:</label>
+                                <div class="size-selectors">
+                                    <label class="size-option">
+                                        <input type="radio" name="queijos-size" checked>
+                                        <span>Broto (4 fatias) - <strong>R$ 44,90</strong></span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="queijos-size">
+                                        <span>Média (6 fatias) - <strong>R$ 59,90</strong></span>
+                                    </label>
+                                    <label class="size-option">
+                                        <input type="radio" name="queijos-size">
+                                        <span>Grande (8 fatias) - <strong>R$ 74,90</strong></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <a href="#pagamento" class="btn-secondary">Adicionar e Finalizar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 3: OPÇÕES DE PAGAMENTO -->
+        <section id="pagamento" class="section-wrapper payment-section">
+            <div class="container">
+                <div class="payment-container">
+                    <div class="payment-info">
+                        <h3>Ambiente de Pagamento Seguro</h3>
+                        <p>Complete seu pedido escolhendo a melhor opção de pagamento abaixo. Letras nítidas e clareza nas taxas.</p>
+                        
+                        <div class="order-summary">
+                            <h4>Resumo do Pedido</h4>
+                            <div class="summary-row">
+                                <span>1x Pizza Calabresa Grande (8 fatias)</span>
+                                <strong>R$ 69,90</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Taxa de Entrega</span>
+                                <span class="free-tier">Grátis</span>
+                            </div>
+                            <hr>
+                            <div class="summary-row total-row">
+                                <span>Total Geral</span>
+                                <strong>R$ 69,90</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods">
+                        <h4>Selecione o método de pagamento:</h4>
+                        <form class="payment-form" onsubmit="event.preventDefault();">
+                            <label class="method-card">
+                                <input type="radio" name="pay-method" checked>
+                                <div class="method-details">
+                                    <span class="method-title"><i class="fa-solid fa-pix"></i> Pix Instantâneo</span>
+                                    <span class="method-desc">Liberação imediata com 5% de desconto extra.</span>
+                                </div>
+                            </label>
+
+                            <label class="method-card">
+                                <input type="radio" name="pay-method">
+                                <div class="method-details">
+                                    <span class="method-title"><i class="fa-solid fa-credit-card"></i> Cartão de Crédito</span>
+                                    <span class="method-desc">Parcele em até 3x sem juros diretamente pelo app.</span>
+                                </div>
+                            </label>
+
+                            <label class="method-card">
+                                <input type="radio" name="pay-method">
+                                <div class="method-details">
+                                    <span class="method-title"><i class="fa-solid fa-truck-ramp-box"></i> Pagar na Entrega</span>
+                                    <span class="method-desc">Aceitamos dinheiro, débito ou crédito na sua porta.</span>
+                                </div>
+                            </label>
+
+                            <button type="submit" class="btn-primary full-width">Confirmar e Finalizar Pedido</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 4: PERFIL DO CLIENTE -->
+        <section id="perfil" class="section-wrapper profile-section">
+            <div class="container">
